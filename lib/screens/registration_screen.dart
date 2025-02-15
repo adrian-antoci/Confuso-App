@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mystery_app/main.dart';
+import 'package:mystery_app/screens/no_internet_screen.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -27,6 +28,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 setState(() {
                   _errorDisplayed = true;
                 });
+              } else {
+                context.push(screen: NoInternetScreen());
               }
             },
             outlined: true,

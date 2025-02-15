@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           PrimaryButton(text: 'Cancel', onTap: () => context.push(screen: RegistrationScreen())),
-          PrimaryButton(text: 'Why', onTap: () {}, outlined: true),
+          PrimaryButton(text: 'Why', outlined: true, onTap: () => context.push(screen: RegistrationScreen())),
         ],
       ),
       body: Column(
