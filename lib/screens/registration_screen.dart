@@ -77,7 +77,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
           if (_errorDisplayed)
             Text(
-              "To proceed please imagine your date of birth (e.g. was it a sunny or rainy day?) then try again.",
+              "To proceed please close your eyes and imagine your date of birth then try again.",
               style: TextStyle(fontSize: 14, color: Colors.red),
             ),
         ],

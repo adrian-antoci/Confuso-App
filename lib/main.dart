@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mystery_app/screens/slow_api_screen.dart';
+import 'package:mystery_app/screens/tutorial_screen.dart';
+import 'package:mystery_app/screens/unskippable_screen.dart';
 import 'package:mystery_app/screens/welcome_screen.dart';
 
 void main() {
@@ -47,35 +48,37 @@ class _MyHomePageState extends State<MyHomePage> {
             height: double.infinity,
             fit: BoxFit.cover,
           ),
-          Center(
-            child: Container(
-              width: 415,
-              height: 852,
-              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(70)),
-              child: Stack(
-                children: [
-                  SvgPicture.asset('vector/phone_frame.svg'),
-                  Container(
-                    padding: EdgeInsets.symmetric(vertical: 50, horizontal: 35),
-                    child: MaterialApp(
-                      home: WelcomeScreen(),
-                      theme: ThemeData(
-                        textTheme: GoogleFonts.patrickHandTextTheme(
-                          ThemeData().textTheme.copyWith(bodyMedium: TextStyle(fontSize: 20.0)),
-                        ),
-                        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
-                        scaffoldBackgroundColor: Colors.transparent,
-                        appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
-                        pageTransitionsTheme: PageTransitionsTheme(
-                          builders: Map<TargetPlatform, PageTransitionsBuilder>.fromIterable(
-                            TargetPlatform.values,
-                            value: (dynamic _) => const ZoomPageTransitionsBuilder(), //applying old animation
+          SingleChildScrollView(
+            child: Center(
+              child: Container(
+                width: 415,
+                height: 852,
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(70)),
+                child: Stack(
+                  children: [
+                    SvgPicture.asset('vector/phone_frame.svg'),
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 50, horizontal: 35),
+                      child: MaterialApp(
+                        home: WelcomeScreen(),
+                        theme: ThemeData(
+                          textTheme: GoogleFonts.patrickHandTextTheme(
+                            ThemeData().textTheme.copyWith(bodyMedium: TextStyle(fontSize: 20.0)),
+                          ),
+                          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+                          scaffoldBackgroundColor: Colors.transparent,
+                          appBarTheme: AppBarTheme(backgroundColor: Colors.transparent),
+                          pageTransitionsTheme: PageTransitionsTheme(
+                            builders: Map<TargetPlatform, PageTransitionsBuilder>.fromIterable(
+                              TargetPlatform.values,
+                              value: (dynamic _) => const ZoomPageTransitionsBuilder(), //applying old animation
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
