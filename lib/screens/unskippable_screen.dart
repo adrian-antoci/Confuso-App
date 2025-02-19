@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mystery_app/main.dart';
+import 'package:mystery_app/screens/end_screen.dart';
 import 'package:mystery_app/screens/tutorial_screen.dart';
 
 class UnskippableScreen extends StatefulWidget {
@@ -61,7 +62,9 @@ class _UnskippableScreenState extends State<UnskippableScreen> {
               ButtonSegment<int>(value: 5, label: Text('5')),
             ],
             selected: <int>{0},
-            onSelectionChanged: (p0) {},
+            onSelectionChanged: (p0) {
+              context.push(screen: WelcomeScreen());
+            },
           ),
         ],
       ),
