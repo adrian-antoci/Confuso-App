@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         alignment: Alignment.center,
         children: [
           SvgPicture.asset(
-            '/vector/background.svg',
+            'assets/vector/background.svg',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(70)),
                 child: Stack(
                   children: [
-                    SvgPicture.asset('vector/phone_frame.svg'),
+                    SvgPicture.asset('assets/vector/phone_frame.svg'),
                     Container(
                       padding: EdgeInsets.symmetric(vertical: 50, horizontal: 35),
                       child: MaterialApp(
