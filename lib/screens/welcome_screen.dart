@@ -12,6 +12,10 @@ class WelcomeScreen extends StatelessWidget {
         spacing: 16,
         mainAxisSize: MainAxisSize.min,
         children: [
+          Text(
+            "We are not responsible for any confusion, existential crises, or career changes that may result from using this app.",
+            style: TextStyle(fontSize: 14),
+          ),
           PrimaryButton(text: 'Cancel', onTap: () => context.push(screen: RegistrationScreen())),
           PrimaryButton(text: 'Why', outlined: true, onTap: () => context.push(screen: RegistrationScreen())),
         ],
