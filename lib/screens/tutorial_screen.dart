@@ -15,16 +15,16 @@ class _TutorialScreenState extends State<TutorialScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("¿! Confuso App"), centerTitle: true),
+      appBar: AppBar(title: Text("¿! Confuso App"), centerTitle: true, automaticallyImplyLeading: false),
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(height: 1, color: Colors.black),
           BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(icon: Icon(Icons.account_balance), label: 'Spin around'),
+              BottomNavigationBarItem(icon: Icon(Icons.rotate_90_degrees_ccw), label: 'Spin around'),
               BottomNavigationBarItem(icon: Icon(Icons.add_sharp), label: 'Add 12'),
-              BottomNavigationBarItem(icon: Icon(Icons.bug_report_outlined), label: 'AI'),
+              BottomNavigationBarItem(icon: Icon(Icons.sunny), label: 'Italy'),
               BottomNavigationBarItem(icon: Icon(Icons.face), label: 'Face'),
             ],
             currentIndex: 0,

@@ -15,7 +15,7 @@ class _SlowApiScreenState extends State<SlowApiScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 50), () => context.push(screen: PrivacyScreen()));
+    Future.delayed(Duration(seconds: 45), () => context.push(screen: PrivacyScreen()));
   }
 
   @override
@@ -28,7 +28,7 @@ class _SlowApiScreenState extends State<SlowApiScreen> {
         startPadding: 0,
         velocity: 40,
         text:
-            "                                                                                                            This is not a bug! We didn't put a loading bar because we didn't think you will be using the app while your train is in a tunnel. That 250ms API call now takes 10 seconds :) Next screen could appear any moment now...",
+            "                                                                                                            This is not a bug! We didn't put a loading bar because we didn't think you'll be using the app while passing through tunnels. That 250ms API call now takes 10 seconds :) Next screen could appear any moment now...",
       ),
     );
   }
