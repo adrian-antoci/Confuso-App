@@ -22,9 +22,9 @@ class _TutorialScreenState extends State<TutorialScreen> {
           Container(height: 1, color: Colors.black),
           BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(icon: Icon(Icons.rotate_90_degrees_ccw), label: 'Spin around'),
+              BottomNavigationBarItem(icon: Icon(Icons.rotate_left), label: 'Spin around'),
               BottomNavigationBarItem(icon: Icon(Icons.add_sharp), label: 'Add 12'),
-              BottomNavigationBarItem(icon: Icon(Icons.sunny), label: 'Italy'),
+              BottomNavigationBarItem(icon: Icon(Icons.local_pizza_outlined), label: 'Italy'),
               BottomNavigationBarItem(icon: Icon(Icons.face), label: 'Face'),
             ],
             currentIndex: 0,
