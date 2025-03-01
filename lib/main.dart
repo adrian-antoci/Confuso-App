@@ -48,14 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SingleChildScrollView(
             child: Center(
-              child: Container(
-                width: 415,
-                height: 852,
-                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(70)),
+              child: Transform.scale(
+                scale: 0.9,
                 child: Stack(
+                  alignment: Alignment.center,
                   children: [
-                    SvgPicture.asset('assets/vector/phone_frame.svg'),
                     Container(
+                      width: 410,
+                      height: 850,
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(70)),
                       padding: EdgeInsets.symmetric(vertical: 50, horizontal: 35),
                       child: MaterialApp(
                         home: WelcomeScreen(),
@@ -75,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
+                    IgnorePointer(child: SvgPicture.asset('assets/vector/phone_frame.svg', height: 852)),
                   ],
                 ),
               ),
