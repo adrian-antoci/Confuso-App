@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mystery_app/main.dart';
+import 'package:mystery_app/screens/registration_screen.dart';
 import 'package:mystery_app/screens/tutorial_screen.dart';
 
 class PrivacyScreen extends StatefulWidget {
@@ -53,7 +54,7 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
             text: 'Accept 1,345 trackers and 1 virus',
             onTap: () {
               if (_toggle1 && _toggle2) {
-                context.push(screen: TutorialScreen());
+                context.push(screen: RegistrationScreen());
               }
             },
           ),
@@ -65,13 +66,12 @@ class _PrivacyScreenState extends State<PrivacyScreen> {
         children: [
           AppLogo(logoOnly: true),
           Text("We care about your privacy", textAlign: TextAlign.center, style: TextStyle(fontSize: 32)),
-          Text("In reality GDPR law forces us to put this message.", textAlign: TextAlign.center),
           Text(
-            "We will track you regardless of your choice because we are convinced users don’t know what they want",
+            "In reality we will track you regardless of your choice because we are convinced users don’t know what they want.",
             textAlign: TextAlign.center,
           ),
           Text(
-            "...and there is virtually no way you can check what we do behind the scenes...so trust us?",
+            "...and there is virtually no way you can check what happens behind the scenes...so trust us?",
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 100),

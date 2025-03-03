@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mystery_app/main.dart';
+import 'package:mystery_app/screens/privacy_screen.dart';
 import 'package:mystery_app/screens/registration_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -12,8 +13,8 @@ class WelcomeScreen extends StatelessWidget {
         spacing: 16,
         mainAxisSize: MainAxisSize.min,
         children: [
-          PrimaryButton(text: 'Cancel', onTap: () => context.push(screen: RegistrationScreen())),
-          PrimaryButton(text: 'Why', outlined: true, onTap: () => context.push(screen: RegistrationScreen())),
+          PrimaryButton(text: 'Cancel', onTap: () => context.push(screen: PrivacyScreen())),
+          PrimaryButton(text: 'Why', outlined: true, onTap: () => context.push(screen: PrivacyScreen())),
         ],
       ),
       body: Column(

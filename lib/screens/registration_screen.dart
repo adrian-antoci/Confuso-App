@@ -67,17 +67,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
           TextField(
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.cake),
+              prefixIcon: Icon(Icons.email),
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
               filled: true,
               hintStyle: TextStyle(color: Colors.grey[800]),
-              hintText: "Imagine your date of birth",
+              hintText: "Imagine your email",
               fillColor: Colors.white70,
             ),
           ),
           if (_errorDisplayed)
             Text(
-              "To proceed please close your eyes and imagine your date of birth then try again.",
+              "To proceed please close your eyes and imagine your email then try again.",
               style: TextStyle(fontSize: 14, color: Colors.red),
             ),
         ],
